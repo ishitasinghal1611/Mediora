@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediora</title>
+
+    <link rel="stylesheet" href="/home.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-hospital"></i>
+
+        <span>MEDIORA</span>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/addPatient">Add Patient</a>
+
+        <a href="/patientDetails">Patients</a>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Welcome to Mediora 👋</h1>
+
+        <h2>Caring Beyond Treatment.</h2>
+
+        <p>
+            A smart hospital management system that helps hospitals
+            register, manage and monitor patient records efficiently.
+        </p>
+
+        <a href="/addPatient">
+            <button>Register Patient</button>
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        🏥
+
+    </div>
+
+</section>
+
+<section class="dashboard">
+
+    <div class="dashboard-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h2><%= total %></h2>
+
+        <p>Total Patients</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <h2><%= new Date().toLocaleDateString() %></h2>
+
+        <p>Today's Date</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <h2>Active</h2>
+
+        <p>Hospital Registry</p>
+
+    </div>
+
+</section>
+
+<section class="menu">
+
+    <a href="/addPatient" class="menu-card">
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        <h3>Add Patient</h3>
+
+        <p>Register a new patient</p>
+
+    </a>
+
+    <a href="/patientDetails" class="menu-card">
+
+        <i class="fa-solid fa-notes-medical"></i>
+
+        <h3>View Patients</h3>
+
+        <p>Browse registered patients</p>
+
+    </a>
+
+    <a href="/patientDetails" class="menu-card">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <h3>Search Patient</h3>
+
+        <p>Find patients quickly</p>
+
+    </a>
+
+</section>
+
+<footer>
+
+Made with ❤️ by <strong>Ishita Singhal</strong>
+
+</footer>
+
+</body>
+</html>

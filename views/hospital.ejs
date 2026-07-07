@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Patient | Mediora</title>
+
+<link rel="stylesheet" href="/form.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-hospital"></i>
+
+<span>MEDIORA</span>
+
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<a href="/patientDetails">Patients</a>
+
+</div>
+
+</nav>
+
+<div class="form-section">
+
+<div class="left-panel">
+
+<div class="circle">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+</div>
+
+<h2>Healthcare Starts Here</h2>
+
+<p>
+
+Register new patients securely and manage
+their records efficiently using Mediora.
+
+</p>
+
+</div>
+
+<div class="right-panel">
+
+<h1>Add New Patient</h1>
+
+<p class="subtitle">
+
+Fill in the patient details below.
+
+</p>
+
+<form action="/registerPatient" method="POST">
+
+<div class="input-group">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+name="name"
+placeholder="Patient Name"
+required>
+
+</div>
+
+<div class="input-group">
+
+<i class="fa-solid fa-calendar"></i>
+
+<input
+type="datetime-local"
+name="date"
+required>
+
+</div>
+
+<div class="input-group">
+
+<i class="fa-solid fa-stethoscope"></i>
+
+<input
+type="text"
+name="illness"
+placeholder="Illness / Diagnosis"
+required>
+
+</div>
+
+<button type="submit">
+
+Register Patient
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

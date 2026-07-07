@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Details</title>
+<link rel="stylesheet" href="/patient.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-hospital"></i>
+        <span>MEDIORA</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/addPatient">Add Patient</a>
+        <a href="/patientDetails">Patients</a>
+    </div>
+
+</nav>
+<div class="page">
+
+    <div class="patient-container">
+
+        <div class="top-bar">
+
+            <h1>Patient Records</h1>
+
+            <a href="/addPatient" class="add-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Add Patient
+            </a>
+
+        </div>
+
+        <form action="/search" method="GET" class="search-box">
+
+            <input
+            type="text"
+            name="name"
+            placeholder="Search patient by name...">
+
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </form>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Illness</th>
+
+                    <th>Admission Date</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            <% patients.forEach(patient=>{ %>
+
+            <tr>
+
+                <td><%= patient.name %></td>
+
+                <td><%= patient.illness %></td>
+
+                <td>
+                    <%= new Date(patient.date).toLocaleString() %>
+                </td>
+
+                <td>
+
+                    <a href="/editPatient/<%= patient._id %>" class="edit">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                    </a>
+
+                    <form
+                    action="/deletePatient/<%= patient._id %>"
+                    method="POST"
+                    style="display:inline;">
+
+                        <button class="delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </form>
+
+                </td>
+
+            </tr>
+
+            <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>

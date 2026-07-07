@@ -1,0 +1,287 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8F6FB;
+    color:#333;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    width:100%;
+    height:75px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#B04A7A;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo i{
+    font-size:28px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#B04A7A;
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.page{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.patient-container{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.top-bar h1{
+    color:#B04A7A;
+    font-size:32px;
+}
+
+.add-btn{
+    background:#B04A7A;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    background:#91395F;
+}
+
+.add-btn i{
+    margin-right:8px;
+}
+
+/* ==========================
+   SEARCH BAR
+========================== */
+
+.search-box{
+    display:flex;
+    margin-bottom:25px;
+}
+
+.search-box input{
+    flex:1;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px 0 0 12px;
+    outline:none;
+    font-size:15px;
+}
+
+.search-box button{
+    width:60px;
+    border:none;
+    background:#B04A7A;
+    color:white;
+    border-radius:0 12px 12px 0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#91395F;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#F7EAF1;
+}
+
+thead th{
+    padding:18px;
+    text-align:left;
+    color:#B04A7A;
+}
+
+tbody td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#FAF5F8;
+}
+
+/* ==========================
+   ACTION BUTTONS
+========================== */
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    transition:.3s;
+}
+
+.edit-btn{
+    background:#3B82F6;
+}
+
+.edit-btn:hover{
+    background:#2563EB;
+}
+
+.delete-btn{
+    background:#EF4444;
+}
+
+.delete-btn:hover{
+    background:#DC2626;
+}
+
+.edit-btn i,
+.delete-btn i{
+    font-size:15px;
+}
+
+/* ==========================
+   EMPTY MESSAGE
+========================== */
+
+.empty{
+    text-align:center;
+    padding:50px;
+    color:#888;
+}
+
+.empty i{
+    font-size:60px;
+    color:#B04A7A;
+    margin-bottom:20px;
+}
+
+.empty h2{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .top-bar{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .patient-container{
+        padding:20px;
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:700px;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box input{
+        border-radius:12px;
+        margin-bottom:10px;
+    }
+
+    .search-box button{
+        width:100%;
+        border-radius:12px;
+        padding:14px;
+    }
+}
